@@ -105,7 +105,7 @@ T.ComboBox {
 
         color: control.down ? control.palette.mid : control.palette.button
         border.color: control.palette.highlight
-        border.width: !control.editable && control.visualFocus ? 2 : 0
+        border.width: !control.editable && control.activeFocus ? 2 : 0
         visible: !control.flat || control.down
     }
 

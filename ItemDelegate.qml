@@ -70,8 +70,8 @@ T.ItemDelegate {
     background: Rectangle {
         implicitWidth: 100
         implicitHeight: 40
-        visible: control.down || control.highlighted || control.visualFocus
+        visible: control.down || control.highlighted || control.activeFocus
         color: Color.blend(control.down ? control.palette.midlight : control.palette.light,
-                                          control.palette.highlight, control.visualFocus ? 0.15 : 0.0)
+                                          control.palette.highlight, control.activeFocus ? 0.15 : 0.0)
     }
 }

@@ -79,8 +79,8 @@ T.CheckDelegate {
         y: control.topPadding + (control.availableHeight - height) / 2
 
         color: control.down ? control.palette.light : control.palette.base
-        border.width: control.visualFocus ? 2 : 1
-        border.color: control.visualFocus ? control.palette.highlight : control.palette.mid
+        border.width: control.activeFocus ? 2 : 1
+        border.color: control.activeFocus ? control.palette.highlight : control.palette.mid
 
         ColorImage {
             x: (parent.width - width) / 2

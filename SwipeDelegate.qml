@@ -73,6 +73,6 @@ T.SwipeDelegate {
         implicitWidth: 100
         implicitHeight: 40
         color: Color.blend(control.down ? control.palette.midlight : control.palette.light,
-                                          control.palette.highlight, control.visualFocus ? 0.15 : 0.0)
+                                          control.palette.highlight, control.activeFocus ? 0.15 : 0.0)
     }
 }

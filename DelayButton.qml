@@ -93,10 +93,10 @@ T.DelayButton {
         implicitHeight: 40
         color: Color.blend(control.palette.button, control.palette.mid, control.down ? 0.5 : 0.0)
         border.color: control.palette.highlight
-        border.width: control.visualFocus ? 2 : 0
+        border.width: control.activeFocus ? 2 : 0
 
         PaddedRectangle {
-            padding: control.visualFocus ? 2 : 0
+            padding: control.activeFocus ? 2 : 0
             width: control.progress * parent.width
             height: parent.height
             color: Color.blend(control.palette.dark, control.palette.mid, control.down ? 0.5 : 0.0)

@@ -71,8 +71,8 @@ T.Switch {
             height: 28
             radius: 16
             color: control.down ? control.palette.light : control.palette.window
-            border.width: control.visualFocus ? 2 : 1
-            border.color: control.visualFocus ? control.palette.highlight : control.enabled ? control.palette.mid : control.palette.midlight
+            border.width: control.activeFocus ? 2 : 1
+            border.color: control.activeFocus ? control.palette.highlight : control.enabled ? control.palette.mid : control.palette.midlight
 
             Behavior on x {
                 enabled: !control.down
