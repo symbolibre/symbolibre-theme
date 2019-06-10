@@ -47,11 +47,11 @@ T.TabButton {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              implicitContentHeight + topPadding + bottomPadding)
 
-    padding: 6
-    spacing: 6
+    padding: 2
+    spacing: 2
 
-    icon.width: 24
-    icon.height: 24
+    icon.width: 14
+    icon.height: 14
     icon.color: checked ? control.palette.windowText : control.palette.brightText
 
     contentItem: IconLabel {
@@ -66,7 +66,7 @@ T.TabButton {
     }
 
     background: Rectangle {
-        implicitHeight: 40
+        implicitHeight: 20
         color: Color.blend(control.checked ? control.palette.window : control.palette.dark,
                                              control.palette.mid, control.down ? 0.5 : 0.0)
     }
