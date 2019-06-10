@@ -72,8 +72,8 @@ T.CheckDelegate {
 
     // keep in sync with CheckBox.qml (shared CheckIndicator.qml was removed for performance reasons)
     indicator: Rectangle {
-        implicitWidth: 28
-        implicitHeight: 28
+        implicitWidth: 18
+        implicitHeight: 18
 
         x: control.mirrored ? control.leftPadding : control.width - width - control.rightPadding
         y: control.topPadding + (control.availableHeight - height) / 2
@@ -94,7 +94,7 @@ T.CheckDelegate {
         Rectangle {
             x: (parent.width - width) / 2
             y: (parent.height - height) / 2
-            width: 16
+            width: 10
             height: 3
             color: control.palette.text
             visible: control.checkState === Qt.PartiallyChecked
