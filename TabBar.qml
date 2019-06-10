@@ -46,6 +46,7 @@ T.TabBar {
                              contentHeight + topPadding + bottomPadding)
 
     spacing: 1
+    bottomInset: 1
 
     contentItem: ListView {
         model: control.contentModel
