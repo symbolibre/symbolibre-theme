@@ -48,8 +48,7 @@ T.ItemDelegate {
                              implicitContentHeight + topPadding + bottomPadding,
                              implicitIndicatorHeight + topPadding + bottomPadding)
 
-    padding: 12
-    spacing: 8
+    padding: 2
 
     icon.width: 24
     icon.height: 24
@@ -69,7 +68,7 @@ T.ItemDelegate {
 
     background: Rectangle {
         implicitWidth: 100
-        implicitHeight: 40
+        implicitHeight: 20
         visible: control.down || control.highlighted || control.activeFocus
         color: Color.blend(control.down ? control.palette.midlight : control.palette.light,
                                           control.palette.highlight, control.activeFocus ? 0.15 : 0.0)
