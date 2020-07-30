@@ -49,6 +49,7 @@ T.TabBar {
     bottomInset: 1
 
     contentItem: ListView {
+        focus: true
         model: control.contentModel
         currentIndex: control.currentIndex
 
