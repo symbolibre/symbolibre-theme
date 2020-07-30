@@ -55,6 +55,7 @@ T.DialogButtonBox {
     }
 
     contentItem: ListView {
+        focus: true
         model: control.contentModel
         spacing: control.spacing
         orientation: ListView.Horizontal
