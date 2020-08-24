@@ -50,6 +50,16 @@ T.ItemDelegate {
 
     padding: 2
 
+    Keys.onReturnPressed: down = true
+    Keys.onEnterPressed: down = true
+    Keys.onReleased: {
+        if (down && (event.key === Qt.Key_Return || event.key === Qt.Key_Enter)) {
+            down = false;
+            onClicked();
+            event.accepted = true;
+        }
+    }
+
     icon.width: 24
     icon.height: 24
     icon.color: control.palette.text
