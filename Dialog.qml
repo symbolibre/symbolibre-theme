@@ -83,4 +83,14 @@ T.Dialog {
     T.Overlay.modeless: Rectangle {
         color: Color.transparent(control.palette.shadow, 0.12)
     }
+
+    // Counters focus issues when reparenting the overlay, see Popup
+    property Item previousActiveFocus
+
+    onAboutToShow: {
+        previousActiveFocus = window.activeFocusItem;
+    }
+    onClosed: {
+        previousActiveFocus.forceActiveFocus();
+    }
 }
