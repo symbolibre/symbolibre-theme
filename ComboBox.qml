@@ -52,6 +52,17 @@ T.ComboBox {
     leftPadding: padding + (!control.mirrored || !indicator || !indicator.visible ? 0 : indicator.width + spacing)
     rightPadding: padding + (control.mirrored || !indicator || !indicator.visible ? 0 : indicator.width + spacing)
 
+    Keys.onReturnPressed: if (!editable && !popup.visible) down = true
+    Keys.onEnterPressed: if (!editable && !popup.visible) down = true
+    Keys.onReleased: {
+        if (!popup.visible && down && !editable &&
+            (event.key === Qt.Key_Return || event.key === Qt.Key_Enter)) {
+            down = false;
+            popup.open();
+            event.accepted = true;
+        }
+    }
+
     delegate: ItemDelegate {
         width: parent.width
         text: control.textRole ? (Array.isArray(control.model) ? modelData[control.textRole] : model[control.textRole]) : modelData
