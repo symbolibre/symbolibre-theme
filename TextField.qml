@@ -74,8 +74,6 @@ T.TextField {
     }
 
     background: Rectangle {
-        implicitWidth: 200
-        implicitHeight: 40
         border.width: control.activeFocus ? 2 : 1
         color: control.palette.base
         border.color: control.activeFocus ? control.palette.highlight : control.palette.mid
